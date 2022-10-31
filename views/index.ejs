@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tạo Trang Landing Page</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body>
+  <div class="header">
+    <!--Bắt Đầu Navbar-->
+    <div class="navbar">
+        <!-- <div class="logo">
+            <a href="#"><img src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/xay_dung_website_template/rsz_ni%E1%BB%81m_vui_l%E1%BA%ADp_tr%C3%ACnh_1.png" width="200" alt="logo"></a>
+        </div> -->
+        <div class="menu">
+            <ul>
+                <li>Trang Chủ</li>
+                <li>Về Chúng Tôi</li>
+                <li>Dịch Vụ</li>
+                <li>Liên Hệ</li>
+            </ul>
+        </div>
+        <form method="post"><button type="submit">Login</button></form>
+          
+
+        
+    </div>
+    <!--Kết Thúc Navbar-->
+        <!--Bắt Đầu Banner-->
+    <div class="banner">
+        <div class="noi-dung">
+            <h1>Mong muốn chia sẻ kiến thức về lập trình đến mọi người.</h1>
+            <h3>Niềm Vui Lập Trình</h3>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+        <div class="btn-group">
+            <!-- <div class="signup-btn">Đăng Ký</div> -->
+            <div class="play-btn">
+                <div class="play-btn-inner">
+                    <i class="fa fa-play"></i>
+                </div>
+                <span>Xem Tiện Ích Dịch Vụ</span>
+            </div>
+        </div>
+    </div>
+    <div class="hinh-anh">
+        <img src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/xay_dung_website_template/rsz_1hinh_minh_hoa_1.jpg" alt="">
+    </div>
+        <!--Kết Thúc Banner-->
+</div>
+ </body>
+ <style>
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+ }
+a{
+     text-decoration: none;
+ }
+ul{
+     list-style: none;
+ }
+ /*Chỉnh vị trí, độ rộng, độ cao... cho navbar*/
+ .header .navbar{
+     width: 100%;
+     height: 80px;
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     position: absolute;
+     margin-top: 30px;
+ }
+.logo img{
+     margin-left: 100px;
+ }
+.menu ul li {
+     display: inline-block;
+     padding: 0 25px;
+     cursor: pointer;
+     font-size: 19px;
+     font-weight: 500;
+     line-height: 80px;
+     align-items: center;
+ }
+ /*Tạo hiệu ứng hover cho đường dẫn*/
+ .menu ul li:hover{
+     background-color: #f3ef51;
+ }
+ /*Thiết lập style cho nút đăng nhập*/
+ button{
+     display: block;
+     font-size: 19px;
+     font-weight: 500;
+     cursor: pointer;
+     border-radius: 30px;
+     background-color: #f3ef51;
+     padding: 8px 40px;
+     margin-right: 100px;
+ }
+ .banner{
+     width: 80%;
+     height: 70%;
+     position: absolute;
+     top: 25%;
+     left: 150px;
+     color: #fff;
+ }
+.noi-dung{
+     width: 50%;
+     float: left;
+     padding-left: 50px;
+ }
+.noi-dung h1{
+     margin-top: 100px;
+     font-size: 16px;
+     color: #000;
+     font-weight: 400;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+.noi-dung h3{
+     font-size: 51px;
+     position: relative;
+     color: #000;
+     margin-top: 30px;
+     font-weight: 500;
+     line-height: 1;
+ }
+.noi-dung p {
+     font-size: 16px;
+     margin: 30px 30px 30px 0;
+     letter-spacing: 1px;
+     color: #000;
+     padding-right: 100px;
+ }
+ .hinh-anh{
+     margin-top: 150px;
+     float: right;
+     padding-right: 50px;
+ }
+.hinh-anh img{
+     width: 90%;
+     height: auto;
+ }
+ .btn-group{
+     display: flex;
+     width: 100%;
+     position: relative;
+     padding-left: 50px;
+ }
+ .btn-group .signup-btn{
+     cursor: pointer;
+     display: block;
+     color: #000;
+     text-align: center;
+     font-size: 16px;
+     font-weight: 700;
+     border-radius: 32px;
+     background-color: #ffa037;
+     padding: 15px 50px;
+ }
+.btn-group .play-btn{
+     margin-left: 40px;
+     display: inline-flex;
+ }
+ .btn-group span{
+     color: #000;
+     font-size: 15px;
+     font-weight: 500;
+     margin: auto 20px;
+     cursor: pointer;
+ }
+.play-btn-inner{
+     height: 50px;
+     width: 50px;
+     border: 2px solid transparent;
+     border-radius: 50%;
+     background-color: #000;
+ }
+ .play-btn-inner i{
+     padding: 15px 19px;
+     font-size: 16px;
+     cursor: pointer;
+     color: #fff;
+ }
+ </style>
+ </html>
