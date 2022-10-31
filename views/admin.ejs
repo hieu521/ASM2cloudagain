@@ -19,7 +19,14 @@
             <div class="table">
               <%- select_box %>
             <%- table_string %>
-          </div>        
+          </div> 
+          <script>
+            window.setInterval(() => {window.location.reload()}, 10000);
+            let subMenu = document.getElementById("subMenu");
+            function toggleMenu(){
+                  subMenu.classList.toggle("open-menu");
+            }
+          </script>       
     </div> 
   </body>
   
