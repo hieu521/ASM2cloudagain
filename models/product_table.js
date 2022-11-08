@@ -64,11 +64,11 @@ async function display_products(shop_id,session){
     let num_fields = data.fields.length;
     for (let i=0; i<num_fields; i++) {
         //if shop owner then don't need shop_ID
-        if(session.shop_id!=0 && data.fields[i].name != 'shop_id' )
+        if(session.shop_id!=1 && data.fields[i].name != 'shop_id' )
         {
             table_string += `<th>${data.fields[i].name}</th>`;
         }
-        if(session.shop_id==0){
+        if(session.shop_id==1){
             table_string += `<th>${data.fields[i].name}</th>`;
         }
     }
@@ -87,11 +87,11 @@ async function display_products(shop_id,session){
         for (let j=0; j<num_fields; j++) {
             let field_name = data.fields[j].name
             let cell = data.rows[i][field_name];  
-            if(session.shop_id!=0 && field_name != 'shop_id' )
+            if(session.shop_id!=1 && field_name != 'shop_id' )
             {
                 table_string += `<td><input type="text" name= ${field_name} value=${cell}></td>`;
             }
-            if(session.shop_id==0){
+            if(session.shop_id==1){
                 table_string += `<td>${cell}</td>`;
             }
             
@@ -99,7 +99,7 @@ async function display_products(shop_id,session){
 
 
         //since only shop owners can input new data then the butons should only on their side
-        if(session.shop_id!=0){
+        if(session.shop_id!=1){
             table_string += 
             `<td>
             <button type="submit" name='crud' 
@@ -114,7 +114,7 @@ async function display_products(shop_id,session){
         } 
     }
     //since only shop owner can add product, director does not need it
-    if(session.shop_id!=0){
+    if(session.shop_id!=1){
         const temp = await pg_conn.query('SELECT * FROM products ORDER BY id DESC');
         let tempName = temp.fields[0].name;
         last_id = temp.rows[0][tempName];
