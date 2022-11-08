@@ -73,7 +73,7 @@ async function display_products(shop_id,session){
         }
     }
 
-    if(session.shop_id !=0){
+    if(session.shop_id !=1){
         table_string += `<th>actions</th>`
     }
     
